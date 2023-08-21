@@ -19,7 +19,7 @@ const RouteSwitch = () => {
 
 	return (
 		<CartContext.Provider value={{ cart, setCart }}>
-			<Router>
+			<Router basename="/posh-landing/">
 				<Routes>
 					<Route path="/" element={<IndexPage />} />
 					<Route path="/products" element={<ProductsPage />} />
