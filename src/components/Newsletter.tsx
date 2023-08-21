@@ -11,7 +11,7 @@ const Newsletter = () => {
 		}, 3000);
 	};
 
-	const disable = (event: KeyboardEvent) => {
+	const disable = (event:any) => {
 		if (event.code === "Enter") {
 			event.preventDefault();
 		}
