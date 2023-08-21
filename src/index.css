@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Titillium+Web&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Rubik;
+  }
+}
+
+@layer components {
+	.open {
+		height: 8rem;
+		transition: height .5s cubic-bezier(.22,.68,0,1.71);
+	}
+
+	.closed {
+		height: 5rem;
+		transition: height .5s cubic-bezier(.22,.68,0,1.71);
+	}
+
+	.reappear {
+		display: flex;
+		opacity: 1;
+		transition: opacity .5s cubic-bezier(.22,.68,0,1.71);
+	}
+
+	.disappear {
+		display: none;
+		opacity: 0;
+		transition: opacity .5s cubic-bezier(.22,.68,0,1.71);
+	}
+}
+	
+:root {
+	--text: #0c1d1c;
+	--background: #ffffff;
+	--primary-button: #ade199;
+	--secondary-button: #ecf8e7;
+  --accent: #9ddb85;
+}
+
+::-webkit-scrollbar-track {
+	background: white; 
+}
+
+html {
+	background-color: var(--background);
+	margin: 0;
+	color: var(--text);
+}
+
