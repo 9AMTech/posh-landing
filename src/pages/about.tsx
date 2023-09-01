@@ -13,7 +13,7 @@ const AboutPage: React.FC = () => {
         <Banner
           image={Friends}
           altText="Group of friends sitting down on the beach hugging and watching the sunset together."
-          styles="h-64 w-full max-w-lg mx-auto
+          styles="w-full max-h-[16rem] max-w-[23rem] mx-auto
 					
 					"
         />

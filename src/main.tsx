@@ -15,7 +15,7 @@ export interface CartData {
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 	<React.StrictMode>
-			<RouteSwitch />
+			<RouteSwitch/>
 	</React.StrictMode>,
 )
 

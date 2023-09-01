@@ -4,45 +4,58 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: Rubik;
-  }
+	html {
+		font-family: Rubik;
+	}
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"] {
+		-webkit-appearance: none;
+		margin: 0;
+		-moz-appearance: textfield !important;
+	}
 }
 
 @layer components {
 	.open {
 		height: 8rem;
-		transition: height .5s cubic-bezier(.22,.68,0,1.71);
+		transition: height 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
 	}
 
 	.closed {
 		height: 5rem;
-		transition: height .5s cubic-bezier(.22,.68,0,1.71);
+		transition: height 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
 	}
 
 	.reappear {
 		display: flex;
 		opacity: 1;
-		transition: opacity .5s cubic-bezier(.22,.68,0,1.71);
+		transition: opacity 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
 	}
 
 	.disappear {
 		display: none;
 		opacity: 0;
-		transition: opacity .5s cubic-bezier(.22,.68,0,1.71);
+		transition: opacity 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
+	}
+
+	.round-button {
+		width: 2rem;
+		border: 2px solid black;
+		border-radius: 100%;
 	}
 }
-	
+
 :root {
 	--text: #0c1d1c;
 	--background: #ffffff;
 	--primary-button: #ade199;
 	--secondary-button: #ecf8e7;
-  --accent: #9ddb85;
+	--accent: #9ddb85;
 }
 
 ::-webkit-scrollbar-track {
-	background: white; 
+	background: white;
 }
 
 html {
@@ -50,4 +63,3 @@ html {
 	margin: 0;
 	color: var(--text);
 }
-

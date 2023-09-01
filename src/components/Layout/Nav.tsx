@@ -27,7 +27,7 @@ const Nav = () => {
 
 	return (
 		<nav
-			className={`sticky top-0 pt-4 px-4 bg-background inline-flex w-full 
+			className={`sticky top-0 pt-4 px-4 bg-background inline-flex w-full md:text-lg lg:text-xl
 			${open ? "open" : "closed"} 
 			`}
 		>
@@ -60,7 +60,7 @@ const Nav = () => {
 				</section>
 				{open ? (
 					<section
-						className={`inline-flex items-center mb-2 [&>*]:mx-2 
+						className={`inline-flex items-center mb-2 [&>*]:mx-2 md:[&>*]:mx-4
 						${open ? "reappear" : "disappear"}
 						`}
 					>

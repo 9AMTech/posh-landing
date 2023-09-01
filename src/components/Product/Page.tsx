@@ -23,6 +23,7 @@ const Page: React.FC<ProductProps> = (props) => {
 			id: props.id,
 			name: props.name,
 			price: props.price,
+			description: props.description,
 			quantity: 1,
 			image: props.image,
 		};
@@ -31,21 +32,21 @@ const Page: React.FC<ProductProps> = (props) => {
 			newCart.push(newItem);
 		} else {
 			for (let i = 0; i < newCart.length; i++) {
-				console.log(`Props ID : ${props.id}`);
-				console.log(`Loop Item ID : ${newCart[i].id}`);
+				// console.log(`Props ID : ${props.id}`);
+				// console.log(`Loop Item ID : ${newCart[i].id}`);
 				// Case : Item exists in cart
 				if (props.id === newCart[i].id) {
 					// Update cart state
 					exists = true;
 					newCart[i].quantity++;
-					console.log(`New Quantity : ${newCart[i].quantity}`);
+					// console.log(`New Quantity : ${newCart[i].quantity}`);
 				}
 			}
 			if (exists === false) {
 				newCart.push(newItem);
 			}
 		}
-		console.log(newCart);
+		// console.log(newCart);
 		CartData.setCart(newCart);
 	};
 

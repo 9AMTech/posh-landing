@@ -6,9 +6,11 @@ import ProductsPage from "./pages/products";
 import ProductPage from "./pages/products/[id]";
 import AboutPage from "./pages/about";
 import CartPage from "./pages/cart";
+import ScrollToTop from "./components/ScrollToTop";
 
 export interface CartData {
 	id: number;
+	description: string;
 	name: string;
 	price: number;
 	quantity: number;
@@ -20,6 +22,7 @@ const RouteSwitch = () => {
 	return (
 		<CartContext.Provider value={{ cart, setCart }}>
 			<Router basename="/posh-landing/">
+				<ScrollToTop />
 				<Routes>
 					<Route path="/" element={<IndexPage />} />
 					<Route path="/products" element={<ProductsPage />} />
