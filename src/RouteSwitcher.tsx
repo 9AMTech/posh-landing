@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartContext, ProductContext } from "./Context";
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect } from 'react';
 import IndexPage from "./pages";
 import ProductsPage from "./pages/products";
 import ProductPage from "./pages/products/[id]";
