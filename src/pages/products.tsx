@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Layout from "../components/Layout/Layout";
 import Card from "../components/Product/Card";
 import { formatPrice } from "../components/functions";
-import { FakeStoreData } from "../components/Layout/Layout";
+import { ProductContext } from "../Context";
 
 
 const ProductsPage: React.FC = () => {
-	const [products, setProducts] = useState<FakeStoreData[]>([]);
 
-	useEffect(() => {
-		const uri = "https://fakestoreapi.com/products/";
-		let isCancelled = false;
-		fetch(uri)
-			.then((res) => res.json() as Promise<FakeStoreData[]>)
-			.then((json) => {
-				if (!isCancelled) {
-					const parsedProducts: FakeStoreData[] = [];
-					json.map((product) => {
-						if (product.category !== "electronics") {
-							parsedProducts.push(product);
-						}
-					}
-					);
-					setProducts(parsedProducts);
-				}
-				return () => {
-					isCancelled = true;
-				};
-			});
-	}, []);
+	const products = useContext(ProductContext);
+
 	return (
 		<Layout>
 			<section className="grid grid-cols-1 w-full max-w-sm gap-y-12 mx-auto my-24
