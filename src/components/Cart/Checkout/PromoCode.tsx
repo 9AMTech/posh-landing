@@ -14,14 +14,14 @@ const PromoCode: React.FC<IPromoCode> = (props) => {
 		setPromoCode("");
 		if (promoCode === "EARLYBIRD23") {
 			props.setShipping(true);
-			setPromoMessage(n => n ="CODE ACTIVATED : FREE SHIPPING");
+			setPromoMessage(_n => _n ="CODE ACTIVATED : FREE SHIPPING");
 		}
 		else {
 			props.setShipping(false);
-			setPromoMessage(n => n = "INVALID CODE");
+			setPromoMessage(_n => _n = "INVALID CODE");
 		}
 		setTimeout(() => {
-			setPromoMessage(n => n ="");
+			setPromoMessage(_n => _n ="");
 		}, 2500);
 	}
 	

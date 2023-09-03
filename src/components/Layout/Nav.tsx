@@ -27,7 +27,7 @@ const Nav = () => {
 
 	return (
 		<nav
-			className={`sticky top-0 pt-4 px-4 bg-background inline-flex w-full md:text-lg lg:text-xl
+			className={`sticky top-0 pt-3 px-5 bg-background inline-flex w-full md:text-lg lg:text-xl border-b-2
 			${open ? "open" : "closed"} 
 			`}
 		>

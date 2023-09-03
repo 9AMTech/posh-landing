@@ -21,13 +21,14 @@
 		height: 8rem;
 		transition: height 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
 	}
-
+	
 	.closed {
 		height: 5rem;
 		transition: height 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
 	}
-
+	
 	.reappear {
+		padding-bottom: 2px;
 		display: flex;
 		opacity: 1;
 		transition: opacity 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);

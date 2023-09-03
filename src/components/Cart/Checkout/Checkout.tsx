@@ -1,12 +1,11 @@
 import Button from "../../Button";
-import PromoCode from "./PromoCode";
 import { CartContext } from "../../../Context";
 import { useContext, useState } from 'react';
 import { formatPrice } from "../../functions";
 
 const Checkout: React.FC = () => {
 	const CartData = useContext(CartContext);
-	const [freeShipping, setFreeShipping] = useState(false);
+	const [freeShipping, _setFreeShipping] = useState(false);
 
 	return (
 		<section className="max-w-lg min-w-[20rem] flex flex-col justify-between

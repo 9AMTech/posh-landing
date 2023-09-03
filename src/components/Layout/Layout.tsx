@@ -1,5 +1,5 @@
 import Nav from "./Nav";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 export interface FakeStoreData {
 	id: number;
@@ -18,7 +18,7 @@ export default function Layout({ children }: any) {
 			<section className="flex flex-col justify-between h-auto mb-auto">
 				{children}
 			</section>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 }
